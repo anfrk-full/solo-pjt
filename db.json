@@ -48,31 +48,43 @@
             "id" : "1",
             "local" : "Jeonju",
             "name" : "연식당",
-            "menu" : "연어"
+            "menu" : "연어",
+            "img" : "img/Salmon.jpg"
         },
         {
             "id" : "2",
             "local" : "Jeonju",
             "name" : "조점례남문피순대",
-            "menu" : "순대"
+            "menu" : "순대",
+            "img" : "img/sundae.jpg"
         },
         {
             "id" : "3",
             "local" : "Jeonju",
             "name" : "삼백집",
-            "menu" : "국밥"
+            "menu" : "국밥",
+            "img" : "img/gukbap.jpg"
         },
         {
             "id" : "4",
             "local" : "Jeonju",
             "name" : "한국집",
-            "menu" : "비빔밥"
+            "menu" : "비빔밥",
+            "img" : "img/bibimbab.jpg"
         },
         {
             "id" : "5",
             "local" : "Jeonju",
-            "name" : "한국집",
-            "menu" : "비빔밥"
+            "name" : "베테랑",
+            "menu" : "칼국수",
+            "img" : "img/Kalguksu.jpg"
+        },
+        {
+            "id" : "6",
+            "local" : "Jeonju",
+            "name" : "승구우동",
+            "menu" : "우동",
+            "img" : "img/udon.jpg" 
         }
     ]
 }
