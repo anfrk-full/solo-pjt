@@ -1,91 +1,100 @@
 {
-    "tourist" : [
-        {
-            "id" : "1",
-            "local" : "Jeonju",
-            "name" : "한옥마을",
-            "content" : "도심 일대에 700여 채의 한옥이 군락을 이루고 있는 한옥촌이다.",
-            "img" : "img/hanok.jpg"
-        },
-        {
-            "id" : "2",
-            "local" : "Jeonju",
-            "name" : "완산공원",
-            "content" : "장군봉 팔각정까지 올라가면 전주의 전경이 한눈에 보인다.",
-            "img" : "img/WansanPark.jpg"
-        },
-        {
-            "id" : "3",
-            "local" : "Jeonju",
-            "name" : "덕진공원",
-            "content" : "7~8월에는 공원 내 호수를 가득 채우는 연꽃이 장관을 연출한다.",
-            "img" : "img/DeokjinPark.jpg"
-        },
-        {
-            "id" : "4",
-            "local" : "Jeonju",
-            "name" : "자만벽화마을",
-            "content" : "다채로운 벽화와 함께 전주 시내를 한눈에 조망할 수 있는 명소인 옥상 정원을 만나보실 수 있는 곳이다.",
-            "img" : "img/MuralVillage.jpg"
-        },
-        {
-            "id" : "5",
-            "local" : "Jeonju",
-            "name" : "전주김치문화관",
-            "content" : "김치에 대한 역사와 문화를 알아볼 수 있는 곳이다.",
-            "img" : "img/kimchi.jpg"
-        },
-        {
-            "id" : "6",
-            "local" : "Jeonju",
-            "name" : "영화의거리",
-            "content" : "매년 5월마다 국제영화제를 즐길 수 있는 곳이다.",
-            "img" : "img/movieStreet.jpg"
-        }
-    ],
-    "restaurant" : [
-        {
-            "id" : "1",
-            "local" : "Jeonju",
-            "name" : "연식당",
-            "menu" : "연어",
-            "img" : "img/Salmon.jpg"
-        },
-        {
-            "id" : "2",
-            "local" : "Jeonju",
-            "name" : "조점례남문피순대",
-            "menu" : "순대",
-            "img" : "img/sundae.jpg"
-        },
-        {
-            "id" : "3",
-            "local" : "Jeonju",
-            "name" : "삼백집",
-            "menu" : "국밥",
-            "img" : "img/gukbap.jpg"
-        },
-        {
-            "id" : "4",
-            "local" : "Jeonju",
-            "name" : "한국집",
-            "menu" : "비빔밥",
-            "img" : "img/bibimbab.jpg"
-        },
-        {
-            "id" : "5",
-            "local" : "Jeonju",
-            "name" : "베테랑",
-            "menu" : "칼국수",
-            "img" : "img/Kalguksu.jpg"
-        },
-        {
-            "id" : "6",
-            "local" : "Jeonju",
-            "name" : "승구우동",
-            "menu" : "우동",
-            "img" : "img/udon.jpg" 
-        }
-    ],
-    "board" : []
+  "tourist": [
+    {
+      "id": "1",
+      "local": "Jeonju",
+      "name": "한옥마을",
+      "content": "도심 일대에 700여 채의 한옥이 군락을 이루고 있는 한옥촌이다.",
+      "img": "img/hanok.jpg"
+    },
+    {
+      "id": "2",
+      "local": "Jeonju",
+      "name": "완산공원",
+      "content": "장군봉 팔각정까지 올라가면 전주의 전경이 한눈에 보인다.",
+      "img": "img/WansanPark.jpg"
+    },
+    {
+      "id": "3",
+      "local": "Jeonju",
+      "name": "덕진공원",
+      "content": "7~8월에는 공원 내 호수를 가득 채우는 연꽃이 장관을 연출한다.",
+      "img": "img/DeokjinPark.jpg"
+    },
+    {
+      "id": "4",
+      "local": "Jeonju",
+      "name": "자만벽화마을",
+      "content": "다채로운 벽화와 함께 전주 시내를 한눈에 조망할 수 있는 명소인 옥상 정원을 만나보실 수 있는 곳이다.",
+      "img": "img/MuralVillage.jpg"
+    },
+    {
+      "id": "5",
+      "local": "Jeonju",
+      "name": "전주김치문화관",
+      "content": "김치에 대한 역사와 문화를 알아볼 수 있는 곳이다.",
+      "img": "img/kimchi.jpg"
+    },
+    {
+      "id": "6",
+      "local": "Jeonju",
+      "name": "영화의거리",
+      "content": "매년 5월마다 국제영화제를 즐길 수 있는 곳이다.",
+      "img": "img/movieStreet.jpg"
+    }
+  ],
+  "restaurant": [
+    {
+      "id": "1",
+      "local": "Jeonju",
+      "name": "연식당",
+      "menu": "연어",
+      "img": "img/Salmon.jpg"
+    },
+    {
+      "id": "2",
+      "local": "Jeonju",
+      "name": "조점례남문피순대",
+      "menu": "순대",
+      "img": "img/sundae.jpg"
+    },
+    {
+      "id": "3",
+      "local": "Jeonju",
+      "name": "삼백집",
+      "menu": "국밥",
+      "img": "img/gukbap.jpg"
+    },
+    {
+      "id": "4",
+      "local": "Jeonju",
+      "name": "한국집",
+      "menu": "비빔밥",
+      "img": "img/bibimbab.jpg"
+    },
+    {
+      "id": "5",
+      "local": "Jeonju",
+      "name": "베테랑",
+      "menu": "칼국수",
+      "img": "img/Kalguksu.jpg"
+    },
+    {
+      "id": "6",
+      "local": "Jeonju",
+      "name": "승구우동",
+      "menu": "우동",
+      "img": "img/udon.jpg"
+    }
+  ],
+  "board": [
+    {
+      "id": "Date.now()",
+      "title": "제목",
+      "content": "내용",
+      "writer": "작성자",
+      "local": "Jeonju"
+    }
+  ],
+  "userinfo": []
 }

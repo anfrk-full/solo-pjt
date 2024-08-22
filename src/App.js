@@ -1,9 +1,11 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Tourist from './weather/component/pages/Tourist';
-import Restaurant from './weather/component/pages/Restaurant';
-import HomePage from './weather/component/pages/HomePage';
-import BoardPage from './weather/component/pages/BoardPage';
+import Tourist from './travel/component/pages/Tourist';
+import Restaurant from './travel/component/pages/Restaurant';
+import HomePage from './travel/component/pages/HomePage';
+import BoardPage from './travel/component/pages/BoardPage';
 import Header from './Header';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min';
 
 function App() {
     return (
