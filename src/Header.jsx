@@ -31,6 +31,11 @@ function Header() {
                                     onClick={() => navigate('restaurant', {state : {selectedlocal}})}>
                                 맛집
                             </button>
+                            <button class='btn btn-outline-secondary me-2' 
+                                    type='button'
+                                    onClick={() => navigate('board', {state : {selectedlocal}})}>
+                                게시판
+                            </button>
                         </form>
                     </nav>
                 </form>

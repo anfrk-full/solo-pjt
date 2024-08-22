@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
-import TouristInfo from "./information/TouristInfo";
+import TouristInfo from "../information/TouristInfo";
 import axios from "axios";
 
 function Tourist(props) {

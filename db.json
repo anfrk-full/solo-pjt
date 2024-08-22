@@ -86,5 +86,6 @@
             "menu" : "우동",
             "img" : "img/udon.jpg" 
         }
-    ]
+    ],
+    "board" : []
 }
