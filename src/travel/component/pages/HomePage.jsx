@@ -3,11 +3,16 @@ import React, { useState } from "react";
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import Form from 'react-bootstrap/Form';
+import { useNavigate } from "react-router-dom";
 
 function HomePage() {
 
+    const navigate = useNavigate();
+
     const [signId, setSignId] = useState('');
     const [signPwd, setSignPwd] = useState('');
+    const [loginId, setLoginId] = useState('');
+    const [loginPwd, setLoginPwd] = useState('');
     const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);
@@ -49,6 +54,34 @@ function HomePage() {
         
     }
 
+    const loginIdHandler = (event) => {
+        setLoginId(event.target.value);
+    }
+
+    const loginPwdHandler = (event) => {
+        setLoginPwd(event.target.value);
+    }
+
+    const login = async() => {
+        try {
+            const response = await axios.get(`http://localhost:8000/userinfo?id=${loginId}`);
+
+            if (response.data.length > 0) {
+                if(response.data[0].password == loginPwd){
+                    alert('로그인이 완료되었습니다.');
+                    navigate('board', {state : 'Seoul'});
+                } else {
+                    alert('비밀번호가 맞지 않습니다.');
+                }
+            } else {
+                alert('존재하지 않는 ID 입니다.');
+            }
+        } catch (err) {
+            console.log('로그인 중 오류 발생 , ' , err);
+        }
+        
+    }
+
     return(
         <div class='container' >
             <form class='form-control d-flex flex-column align-items-center'>
@@ -57,18 +90,18 @@ function HomePage() {
                         type="text"
                         id="userid"
                         style={{width : '100%'}}
-                        onChange={signIdHandler}
+                        onChange={loginIdHandler}
                     />
                     <Form.Label htmlFor="password">Password</Form.Label>
                     <Form.Control
                         type="password"
                         id="password"
                         style={{width : '100%'}}
-                        onChange={signPwdHandler}
+                        onChange={loginPwdHandler}
                     />
                 <br/>
                 <div class='row' style={{width : '100%'}}>
-                    <Button variant="primary">
+                    <Button variant="primary" onClick={login}>
                         로그인
                     </Button>
                     <hr />
@@ -93,11 +126,13 @@ function HomePage() {
                     <Form.Control
                         type="text"
                         id="userid"
+                        onChange={signIdHandler}
                     />
                     <Form.Label htmlFor="password">Password</Form.Label>
                     <Form.Control
                         type="password"
                         id="password"
+                        onChange={signPwdHandler}
                     />
                 </Modal.Body>
                 <Modal.Footer>
