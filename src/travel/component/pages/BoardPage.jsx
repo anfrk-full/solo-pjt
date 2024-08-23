@@ -29,7 +29,7 @@ function BoardPage() {
                 <h1>{selectedlocal}</h1>
                 <button class='btn btn-primary'>글 작성하기</button>
             </div>
-            <div className="form-control">
+            <div>
                     {board.length > 0 ?(
                     board.map((board) => {
                         return (

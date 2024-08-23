@@ -89,11 +89,28 @@
   ],
   "board": [
     {
-      "id": "Date.now()",
-      "title": "제목",
-      "content": "내용",
-      "writer": "작성자",
-      "local": "Jeonju"
+      "id": 1,
+      "title": "첫글입니다",
+      "content": "첫 글쓰기를 해보았습니다.",
+      "writer": "anfrk",
+      "local": "Jeonju",
+      "date" : 1724403552940
+    },
+    {
+      "id": 2,
+      "title": "두번째 글입니다",
+      "content": "두번째 글쓰기를 해보았습니다.",
+      "writer": "anfrk",
+      "local": "Jeonju",
+      "date" : 1724403553491
+    },
+    {
+      "id": 3,
+      "title": "세번째 글입니다",
+      "content": "세번째 글쓰기를 해보았습니다.",
+      "writer": "anfrk",
+      "local": "Jeonju",
+      "date" : 1724403556842
     }
   ],
   "userinfo": [
