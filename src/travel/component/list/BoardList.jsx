@@ -7,7 +7,7 @@ function BoardList(props) {
     const navigate = useNavigate();
 
     const moveHandler = (id) => {
-        navigate(`board-view/${id}`);
+        navigate(`/board-view/${id}`);
     }
 
     const editHandler = (event) => {
