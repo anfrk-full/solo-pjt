@@ -1,40 +1,42 @@
 import React, { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import RestaurantInfo from "../information/RestaurantInfo";
 import axios from "axios";
 
 function Restaurant() {
-    const location = useLocation();
-    const selectedlocal = location.state.selectedlocal;
 
-    const [food, setFood] = useState([]);
+    const {id} = useParams();
+    const [restaurant, setRestaurant] = useState([]);
 
+    //.json에서 데이터 가져오기
     useEffect(() => {
         const getTourist = async() => {
-            try{
-                const response = await axios.get(`http://localhost:8000/restaurant?local=${selectedlocal}`);
-                console.log("response data local, " , response.data);
-                setFood(response.data);
+            try {
+                // json-server로부터 tourist 데이터를 가져옴
+                const response = await axios.get(`http://localhost:8000/restaurant?tourid=${id}`);
+                console.log("response data: ", response.data);
+                setRestaurant(response.data);
             } catch (err) {
-                console.log("get err , " , err);
+                console.log("Error fetching tourist data: ", err);
             }
-        }
+        };
         getTourist();
-    }, [selectedlocal])
+    }, []); // Dependency array는 비워두어 한번만 호출되게 함.
 
-    return (
-        <div class='container'>
-            <h1>{selectedlocal}</h1>
+    return(
+        <div className="container">
+            <h1>음식점 목록</h1>
             <div className="form-control">
-                <div class='row'>
+                <div >
                     {
-                        food.map((food) => {
-                            return (
-                                <div class='col-md-4 mb-4' >
-                                    <RestaurantInfo food={food} key={food.id}/>
-                                </div>
-                            )
-                        })
+                        restaurant.map((restaurant) => (
+                            <div key={restaurant.title}>
+                                <RestaurantInfo restaurant={restaurant} />
+                                <br/>
+                                <hr/>
+                                <br/>
+                            </div>
+                        ))
                     }
                 </div>
             </div>

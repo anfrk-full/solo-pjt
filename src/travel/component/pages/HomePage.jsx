@@ -4,10 +4,14 @@ import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import Form from 'react-bootstrap/Form';
 import { useNavigate } from "react-router-dom";
+import { useLogin } from "../context/LoginContext";
 
 function HomePage() {
 
     const navigate = useNavigate();
+    const selectedlocal = "Jeonju";
+
+    const { login } = useLogin();
 
     const [signId, setSignId] = useState('');
     const [signPwd, setSignPwd] = useState('');
@@ -33,15 +37,15 @@ function HomePage() {
             signDate : Date.now()
         }
         try{
-            const responseData = await axios.get(`http://localhost:8000/userinfo?id=${data.id}`);
+            const responseData = await axios.get(`http://localhost:8001/userInfo/view/${data.id}`);
 
-            if(responseData.data.length > 0) {
+            if(responseData.status == 200) {
                 alert('이미 존재하는 ID입니다 다른걸 입력해주세요.');
                 setSignId('');
                 setSignPwd('');
                 
             } else {
-                const response = await axios.post(`http://localhost:8000/userinfo`, data);
+                const response = await axios.post(`http://localhost:8001/userInfo/save`, data);
                 console.log("debug >>> signUp post response , " , response.data);
                 setSignId('');
                 setSignPwd('');
@@ -62,14 +66,15 @@ function HomePage() {
         setLoginPwd(event.target.value);
     }
 
-    const login = async() => {
+    const HandleLogin = async() => {
         try {
-            const response = await axios.get(`http://localhost:8000/userinfo?id=${loginId}`);
-
-            if (response.data.length > 0) {
-                if(response.data[0].password == loginPwd){
+            const response = await axios.get(`http://localhost:8001/userInfo/view/${loginId}`);
+            console.log(response);
+            if (response.status == 200) {
+                if(response.data.password == loginPwd){
                     alert('로그인이 완료되었습니다.');
-                    navigate('board', {state : 'Seoul'});
+                    login(loginId);
+                    navigate('board', {state : selectedlocal});
                 } else {
                     alert('비밀번호가 맞지 않습니다.');
                 }
@@ -101,7 +106,7 @@ function HomePage() {
                     />
                 <br/>
                 <div class='row' style={{width : '100%'}}>
-                    <Button variant="primary" onClick={login}>
+                    <Button variant="primary" onClick={HandleLogin}>
                         로그인
                     </Button>
                     <hr />
@@ -119,7 +124,7 @@ function HomePage() {
                 keyboard={false}
             >
                 <Modal.Header closeButton>
-                    <Modal.Title>Modal title</Modal.Title>
+                    <Modal.Title>회원가입</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
                     <Form.Label htmlFor="userid">Id</Form.Label>
@@ -144,9 +149,6 @@ function HomePage() {
             </Modal>
 
         </div>
-
-        
-        
     )
 }
 
